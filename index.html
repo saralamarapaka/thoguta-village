@@ -1,1 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SIDDIPET DISTRICT - THOGUTA MANDAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#eef3f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
+}
+
+.info h3{
+color:#0b5394;
+margin-bottom:5px;
+}
+
+.info p{
+color:#666;
+}
+
+.open-btn{
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
+}
+
+footer{
+background:#0b5394;
+color:#fff;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="ou-logo.png" alt="OU Logo" class="logo">
+
+<div class="title">
+<h1>SIDDIPET DISTRICT</h1>
+<h2>THOGUTA MANDAL</h2>
+</div>
+
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
+
+</header>
+
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+<div class="container" id="places">
+  <!-- 1 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏦</div>
+        <div class="info">
+            <h3>SID-TOG-State Bank of India</h3>
+            <p>Bank</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01272,78.71529" target="_blank">Open Map</a>
+</div>
+
+<!-- 2 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>SID-TOG-ZPHS School</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01242,78.71638" target="_blank">Open Map</a>
+</div>
+
+<!-- 3 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>SID-TOG-Govt High School</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01255,78.71646" target="_blank">Open Map</a>
+</div>
+
+<!-- 4 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛪</div>
+        <div class="info">
+            <h3>SID-TOG-Faith Home Church</h3>
+            <p>Church</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01189,78.71675" target="_blank">Open Map</a>
+</div>
+
+<!-- 5 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">👮</div>
+        <div class="info">
+            <h3>SID-TOG-Police Station</h3>
+            <p>Police Station</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00999,78.72166" target="_blank">Open Map</a>
+</div>
+
+<!-- 6 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>SID-TOG-Mandal Revenue Office</h3>
+            <p>Government Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00966,78.72205" target="_blank">Open Map</a>
+</div>
+
+<!-- 7 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌾</div>
+        <div class="info">
+            <h3>SID-TOG-MLS Point TSCSCL</h3>
+            <p>TSCSCL Center</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00929,78.72297" target="_blank">Open Map</a>
+</div>
+
+<!-- 8 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏥</div>
+        <div class="info">
+            <h3>SID-TOG-Primary Health</h3>
+            <p>Health Centre</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00940,78.72249" target="_blank">Open Map</a>
+</div>
+
+<!-- 9 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🚗</div>
+        <div class="info">
+            <h3>SID-TOG-Siraj Motor</h3>
+            <p>Automobile</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01150,78.71766" target="_blank">Open Map</a>
+</div>
+
+<!-- 10 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🥐</div>
+        <div class="info">
+            <h3>SID-TOG-Golden Bakery</h3>
+            <p>Bakery</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01034,78.71034" target="_blank">Open Map</a>
+</div>
+  <!-- 11 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">📱</div>
+        <div class="info">
+            <h3>SID-TOG-Nandu Digitals</h3>
+            <p>Electronics Shop</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01235,78.72136" target="_blank">Open Map</a>
+</div>
+
+<!-- 12 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛍️</div>
+        <div class="info">
+            <h3>SID-TOG-CMR Shopping Mall</h3>
+            <p>Shopping Mall</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00904,78.72014" target="_blank">Open Map</a>
+</div>
+
+<!-- 13 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛽</div>
+        <div class="info">
+            <h3>SID-TOG-Bharat Petroleum Petrol Pump</h3>
+            <p>Petrol Pump</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00676,78.71591" target="_blank">Open Map</a>
+</div>
+
+<!-- 14 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>SID-TOG-Peddamma Temple</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00536,78.71102" target="_blank">Open Map</a>
+</div>
+
+<!-- 15 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🛕</div>
+        <div class="info">
+            <h3>SID-TOG-Sri Sri Mallikarjuna Swamy</h3>
+            <p>Temple</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00485,78.71112" target="_blank">Open Map</a>
+</div>
+
+<!-- 16 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">⛽</div>
+        <div class="info">
+            <h3>SID-TOG-Indian Oil</h3>
+            <p>Petrol Pump</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00435,78.71030" target="_blank">Open Map</a>
+</div>
+
+<!-- 17 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏛️</div>
+        <div class="info">
+            <h3>SID-TOG-MPCO Office</h3>
+            <p>Government Office</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00638,78.71621" target="_blank">Open Map</a>
+</div>
+
+<!-- 18 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏫</div>
+        <div class="info">
+            <h3>SID-TOG-KGBV</h3>
+            <p>School</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00787,78.71994" target="_blank">Open Map</a>
+</div>
+
+<!-- 19 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🏦</div>
+        <div class="info">
+            <h3>SID-TOG-SBI Bank</h3>
+            <p>Bank</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.00907,78.72115" target="_blank">Open Map</a>
+</div>
+
+<!-- 20 -->
+<div class="place">
+    <div class="left">
+        <div class="icon">🌾</div>
+        <div class="info">
+            <h3>SID-TOG-AGROS RAITHU SEVA KENDHRAM</h3>
+            <p>Raithu Seva Kendram</p>
+        </div>
+    </div>
+    <a class="open-btn" href="https://www.google.com/maps?q=18.01068,78.72467" target="_blank">Open Map</a>
+</div>
+  </div>
+
+<footer>
+© 2026 SIDDIPET DISTRICT - THOGUTA MANDAL
+</footer>
+
+<script>
+
+function searchPlaces(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let places=document.getElementsByClassName("place");
+
+for(let i=0;i<places.length;i++){
+
+let text=places[i].innerText.toLowerCase();
+
+places[i].style.display=text.includes(input)?"flex":"none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
